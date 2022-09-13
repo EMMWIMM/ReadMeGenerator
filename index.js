@@ -10,7 +10,7 @@ const questions = [{
 {
   type: 'input',
   message: 'What is your email?',
-  name: ' email'
+  name: 'email'
 },
 
   {
@@ -46,7 +46,8 @@ const questions = [{
 {
   type: 'list',
   message: 'which license should be shown on this project?',
-  name: ' license'
+  choices: [ 'a', 'b', 'c'],
+  name: 'license'
 }
 ];
 
