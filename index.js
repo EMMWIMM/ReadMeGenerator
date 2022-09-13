@@ -50,6 +50,11 @@ const questions = [{
 }
 ];
 
+inquirer
+.prompt(questions)
+.then((response) =>
+console.log(response));
+
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
 
