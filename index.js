@@ -57,8 +57,10 @@ inquirer
 .then((response) =>
 console.log(response));
 
+const {'github', 'email', 'title', 'description', 'install', 'usage', 'contribution', 'tests', 'license'} = response
+
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(README.md, response) {}
 
 // TODO: Create a function to initialize app
 function init() {}
