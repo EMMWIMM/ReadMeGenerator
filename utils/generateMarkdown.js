@@ -3,9 +3,6 @@ var badge = " badge";
 var link = "link";
 // If there is no license, return an empty string
 function renderLicenseBadge(response) {
-  console.log("response: "+response);
-  console.log("response.license" +response.license);
-  console.log(response.license == "Apache License 2.0");
 
   if(response.license == "Apache License 2.0") {
      badge = "[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)"
