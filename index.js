@@ -2,6 +2,7 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const markdowns = require('./utils/generateMarkdown.js');
+
 // TODO: Create an array of questions for user input
 const questions = [{
   type: 'input',
@@ -54,16 +55,29 @@ const questions = [{
 
 inquirer
 .prompt(questions)
-.then((response) =>
-console.log(response));
+.then((response) =>{
+  const {github, email, title, description, install, usage, contribution, tests, license} = response
 
-const {'github', 'email', 'title', 'description', 'install', 'usage', 'contribution', 'tests', 'license'} = response
+  const markdown= markdowns.generateMarkdown(response);
+  markdowns.generateMarkdown(response);
+  console.log(response + markdown);
+
+});
+
+
+
+// const {github, email, title, description, install, usage, contribution, tests, license} = response
+
+
+
+
+
 
 // TODO: Create a function to write README file
-function writeToFile(README.md, response) {}
+fs.writeFile('README.md', ) {}
 
 // TODO: Create a function to initialize app
-function init() {}
+// function init() {}
 
 // Function call to initialize app
-init();
+// init();
