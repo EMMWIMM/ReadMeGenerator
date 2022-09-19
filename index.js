@@ -48,7 +48,7 @@ const questions = [{
 {
   type: 'list',
   message: 'which license should be shown on this project?',
-  choices: [ 'a', 'b', 'c'],
+  choices: [ 'a', 'b', 'The Unlicense'],
   name: 'license'
 }
 ];
@@ -60,8 +60,12 @@ inquirer
 
   const markdown= markdowns.generateMarkdown(response);
   markdowns.generateMarkdown(response);
-  console.log(response + markdown);
+fs.writeFile('README.md', markdown, (err) =>   err ? console.error(err) : console.log(markdown));
+  // );
+  console.log(markdown);
 
+// .then((response) => {
+//   fs.promise.writeFile('README.md', markdown, (err) =>   err ? console.error(err) : console.log(markdown)
 });
 
 
@@ -74,7 +78,8 @@ inquirer
 
 
 // TODO: Create a function to write README file
-fs.writeFile('README.md', ) {}
+// fs.writeFile('README.md', markdown, (err) =>   err ? console.error(err) : console.log(markdown)
+// );
 
 // TODO: Create a function to initialize app
 // function init() {}
