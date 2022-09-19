@@ -2,7 +2,8 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const markdowns = require('./utils/generateMarkdown.js');
-
+var badge = " ";
+var link = " ";
 // TODO: Create an array of questions for user input
 const questions = [{
   type: 'input',
@@ -48,7 +49,7 @@ const questions = [{
 {
   type: 'list',
   message: 'which license should be shown on this project?',
-  choices: [ 'a', 'b', 'The Unlicense'],
+  choices: [ 'Apache License 2.0', 'MIT License', 'The Unlicense', 'no license'],
   name: 'license'
 }
 ];
@@ -60,7 +61,7 @@ inquirer
 
   const markdown= markdowns.generateMarkdown(response);
   markdowns.generateMarkdown(response);
-fs.writeFile('README.md', markdown, (err) =>   err ? console.error(err) : console.log(markdown));
+fs.writeFile( response.title +'README.md', markdown, (err) =>   err ? console.error(err) : console.log(markdown));
   // );
   console.log(markdown);
 
