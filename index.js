@@ -1,10 +1,10 @@
-// TODO: Include packages needed for this application
+
 const fs = require('fs');
 const inquirer = require('inquirer');
 const markdowns = require('./utils/generateMarkdown.js');
 var badge = " ";
 var link = " ";
-// TODO: Create an array of questions for user input
+
 const questions = [{
   type: 'input',
   message: 'What is your Github username?',
@@ -62,28 +62,8 @@ inquirer
   const markdown= markdowns.generateMarkdown(response);
   markdowns.generateMarkdown(response);
 fs.writeFile( response.title +'README.md', markdown, (err) =>   err ? console.error(err) : console.log(markdown));
-  // );
+
   console.log(markdown);
 
-// .then((response) => {
-//   fs.promise.writeFile('README.md', markdown, (err) =>   err ? console.error(err) : console.log(markdown)
+
 });
-
-
-
-// const {github, email, title, description, install, usage, contribution, tests, license} = response
-
-
-
-
-
-
-// TODO: Create a function to write README file
-// fs.writeFile('README.md', markdown, (err) =>   err ? console.error(err) : console.log(markdown)
-// );
-
-// TODO: Create a function to initialize app
-// function init() {}
-
-// Function call to initialize app
-// init();

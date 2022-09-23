@@ -1,7 +1,7 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+
 var badge = " badge";
 var link = "link";
-// If there is no license, return an empty string
+
 function renderLicenseBadge(response) {
 
   if(response.license == "Apache License 2.0") {
@@ -16,8 +16,8 @@ function renderLicenseBadge(response) {
   return badge
 };
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+
+
 function renderLicenseLink(response) {
   if(response.license === "Apache License 2.0") {
      link = "https://choosealicense.com/licenses/apache-2.0/"
@@ -31,17 +31,20 @@ function renderLicenseLink(response) {
   return link
 };
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
-function renderLicenseSection(license) {}
-
-// TODO: Create a function to generate markdown for README
 function generateMarkdown(response) {
   return `# ${response.title}
   `
   + renderLicenseBadge(response) +
   `
   ${response.description} .
+
+  ## Table of Contents
+  - [Installation](#installation)
+  - [Usage](#usage)
+  - [Contribution](#contribution)
+  - [Test Instructions](#test-instructions)
+  - [Questions](#questions)
+  - [License](#license)
 
   ## Installation
 
