@@ -29,3 +29,6 @@
 
 # Screen recording
 https://drive.google.com/file/d/1SLACrcMcHA0FhKJxlbkyWA2nyFpOUgKE/view
+
+# Example generated readme
+https://github.com/EMMWIMM/ReadMeGenerator/blob/main/ReadmegeneratorREADME.md
