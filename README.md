@@ -31,4 +31,4 @@
 https://drive.google.com/file/d/1SLACrcMcHA0FhKJxlbkyWA2nyFpOUgKE/view
 
 # Example generated readme
-https://github.com/EMMWIMM/ReadMeGenerator/blob/main/yeehawREADME.md#license
+https://github.com/EMMWIMM/ReadMeGenerator/blob/main/yeehawREADME.md
